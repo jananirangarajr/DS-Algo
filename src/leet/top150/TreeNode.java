@@ -18,4 +18,11 @@ public class TreeNode {
         this.left = left;
         this.right = right;
     }
+    public void printTree(TreeNode root) {
+        if (root != null){
+            printTree(root.left);
+            System.out.println(root.val);
+            printTree(root.right);
+        }
+    }
 }
