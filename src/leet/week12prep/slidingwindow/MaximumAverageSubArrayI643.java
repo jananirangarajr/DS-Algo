@@ -1,4 +1,4 @@
-package leet.top150;
+package leet.week12prep.slidingwindow;
 
 public class MaximumAverageSubArrayI643 {
     public static void main(String[] args) {
