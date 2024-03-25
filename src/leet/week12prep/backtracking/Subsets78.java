@@ -3,7 +3,7 @@ package leet.week12prep.backtracking;
 import java.util.ArrayList;
 import java.util.List;
 
-public class subsets78 {
+public class Subsets78 {
     public static void main(String[] args) {
         int[] nums = {1,2,3};
         System.out.println(subsets(nums));
