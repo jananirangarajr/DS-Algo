@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class LetterPhoneNumberCombination17 {
     public static void main(String[] args) {
-        System.out.println(letterCombinations(""));
+        System.out.println(letterCombinations("237"));
     }
     public static List<String> letterCombinations(String digits) {
         HashMap<Integer,String> map = new HashMap<>();
@@ -22,7 +22,8 @@ public class LetterPhoneNumberCombination17 {
         List<String> result = new ArrayList<>();
         if(digits.length() == 0)
             return result;
-        findCombination(result,map,digits, "",0);
+//        findCombination(result,map,digits, "",0);
+        checkWorking(result,map,digits,"",0);
         return result;
     }
 
@@ -37,6 +38,24 @@ public class LetterPhoneNumberCombination17 {
             for(char c : s.toCharArray()){
                 findCombination(result,map,digits,(currentStr+c),index+1);
             }
+        }
+    }
+
+    private static void checkWorking(List<String> result, HashMap<Integer, String> map, String input,String output, int index){
+        if (index > input.length())
+            return;
+        if (output.length() == input.length()) {
+            result.add(output);
+            return;
+        }
+        else {
+//            for (int i = index; i < input.length(); i++) {
+                int digit = Integer.parseInt(String.valueOf(input.charAt(index)));
+                String value = map.get(digit);
+                for (int j = 0; j < value.length(); j++ ) {
+                    checkWorking(result,map,input,(output+value.charAt(j)),index+1);
+                }
+//            }
         }
     }
 }
