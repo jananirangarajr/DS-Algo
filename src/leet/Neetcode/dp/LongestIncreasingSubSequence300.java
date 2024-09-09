@@ -6,7 +6,6 @@ public class LongestIncreasingSubSequence300 {
         System.out.println(lengthOfLIS(nums));
     }
     public static int lengthOfLIS(int[] nums) {
-        //this works.. But more time consuming. O(n^2)
         int n = nums.length;
         int[] dp = new int[n];
         dp[n-1] = 1;
