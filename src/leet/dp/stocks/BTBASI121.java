@@ -1,6 +1,6 @@
 package leet.dp.stocks;
 
-public class BTBAS121 {
+public class BTBASI121 {
     public static void main(String[] args) {
         int[] nums = {7,1,5,3,6,4};
         System.out.println(maxProfit(nums));
